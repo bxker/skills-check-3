@@ -4,6 +4,10 @@ const massive = require('massive');
 require('dotenv').config();
 const {SERVER_PORT, CONNECTION_STRING} = process.env;
 
+//functions
+const {getHouses} = require('./controller');
+
+
 massive(CONNECTION_STRING)
 .then(dbInstance => {
     app.set('db', dbInstance);
@@ -12,6 +16,11 @@ massive(CONNECTION_STRING)
 
 
 app.use(express.json());
+
+app.get('/api/houses', getHouses);
+
+
+
 
 app.listen(SERVER_PORT, () => console.log(`Server is listening on port ${SERVER_PORT}`))
 

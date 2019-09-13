@@ -1,4 +1,4 @@
-div {
+.header-main {
     width: 100vw;
     height: 10vh;
     background: #519872;
@@ -6,7 +6,7 @@ div {
     align-items: center;
 }
 
-div img {
+.header-main img {
     width: 5vw;
     padding: 30px;
 }

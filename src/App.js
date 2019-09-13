@@ -8,10 +8,12 @@ import Header from './Components/Header/Header'
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      {routes}
-    </div>
+    <>
+      <div className="App">
+        <Header/>
+        {routes}
+      </div>
+    </>
   );
 }
 
