@@ -23,11 +23,13 @@ export default class Dashboard extends Component{
             this.setState({
                 houses: response.data
             })
+            console.log(response.data)
         })
     }
 
 
     render(){
+        const {houses} = this.state
         return(
             <div className='dash-container'>
                 <section className="section-1">
@@ -35,7 +37,20 @@ export default class Dashboard extends Component{
                     <button>Add New Property</button>
                 </section>
                 <section className="section-2">
-                    <House houses={this.state.houses}/>
+                    {houses ? houses.map((house =>(
+                        <House 
+                            houses={this.houses}
+                            name={house.name}
+                            address={house.address}
+                            city={house.city}
+                            state={house.state}
+                            zip={house.zip}
+                            img={house.img}
+                            mortgage={house.mortgage}
+                            rent={house.rent}
+                        />
+
+                    ))): <p>No houses to display</p>}
                 </section>
             </div>
         )

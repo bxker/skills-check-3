@@ -37,7 +37,8 @@
     align-items: center;
     height: 20vh;
     background: lightgray;
-    font-size: 1.25rem;
+    padding: 10px;
+    margin: 20px;
 }
 
 .house-card h2 {
