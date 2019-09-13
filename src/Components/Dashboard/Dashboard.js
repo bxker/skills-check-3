@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import './Dashboard.css'
 
 //components
@@ -34,7 +35,7 @@ export default class Dashboard extends Component{
             <div className='dash-container'>
                 <section className="section-1">
                     <h1>Dashboard</h1>
-                    <button>Add New Property</button>
+                    <Link to="/wizard/step1"><button>Add New Property</button></Link>
                 </section>
                 <section className="section-2">
                     {houses ? houses.map((house =>(

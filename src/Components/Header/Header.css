@@ -7,11 +7,11 @@
 }
 
 .header-main img {
-    width: 5vw;
-    padding: 30px;
+    width: 2vw;
+    padding: 30px 5px 30px 300px;
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
 }

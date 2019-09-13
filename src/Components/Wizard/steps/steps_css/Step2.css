@@ -1,0 +1,31 @@
+.step-2-main{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.step-2-info{
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.step-2-buttons{
+    width: 80%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.next-button-2{
+    border: none;
+    height: 4vh;
+    width: 12vw;
+    background: rgb(51, 47, 47);
+    color: white;
+    cursor: pointer;
+}
