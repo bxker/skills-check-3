@@ -16,7 +16,7 @@ export default (
         <Route path="/wizard/step1" component={Step1} />
         <Route path="/wizard/step2" component={Step2} />
         <Route path="/wizard/step3" component={Step3} />
-        <Route path="/displayhouse" component={DisplayHouse} />
+        <Route path="/displayhouse/:name" component={DisplayHouse} />
         <Route path="/" component={Dashboard}/>
     </Switch>
 )
