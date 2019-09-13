@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './House.css'
 
 export default class House extends Component{
@@ -18,6 +19,7 @@ export default class House extends Component{
                     <section>
                         <h2>Monthly Mortgage: ${this.props.mortgage}</h2>
                         <h2>Desired Rent: ${this.props.rent}</h2>
+                        <Link to='/displayhouse'><button>View House</button></Link>
                     </section>
                 </div>
         )
