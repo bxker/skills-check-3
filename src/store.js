@@ -31,26 +31,26 @@ function reducer(state = initialState, action){
                 ...state,
                 name: payload
             }
-        // case UPDATE_ADDRESS:
-        //     return{
-        //         ...state,
-        //         address: payload
-        //     }
-        // case UPDATE_CITY:
-        //     return{
-        //         ...state,
-        //         city: payload
-        //     }
-        // case UPDATE_STATE:
-        //     return{
-        //         ...state,
-        //         state: payload
-        //     }
-        // case UPDATE_ZIP:
-        //     return{
-        //         ...state,
-        //         zip: payload
-        //     }
+        case UPDATE_ADDRESS:
+            return{
+                ...state,
+                address: payload
+            }
+        case UPDATE_CITY:
+            return{
+                ...state,
+                city: payload
+            }
+        case UPDATE_STATE:
+            return{
+                ...state,
+                state: payload
+            }
+        case UPDATE_ZIP:
+            return{
+                ...state,
+                zip: payload
+            }
         default:
             return state;
     }

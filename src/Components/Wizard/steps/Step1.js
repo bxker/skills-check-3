@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Wizard from '../Wizard';
 import './steps_css/Step1.css'
-import store, {UPDATE_NAME} from '../../../store';
+import store, {UPDATE_NAME, UPDATE_ADDRESS, UPDATE_CITY, UPDATE_STATE, UPDATE_ZIP} from '../../../store';
 // , UPDATE_ADDRESS, UPDATE_CITY, UPDATE_STATE, UPDATE_ZIP
 // import axios from 'axios';
 
@@ -20,16 +20,16 @@ export default class WizardStep1 extends Component{
         }
     }
 
-    // componentDidMount(){
-    //     const reduxState = store.getState();
-    //     this.setState({
-    //         name: reduxState.name,
-    //         address: reduxState.address,
-    //         city: reduxState.city,
-    //         state: reduxState.state,
-    //         zip: reduxState.zip
-    //     })
-    // }
+    componentDidMount(){
+        const reduxState = store.getState();
+        this.setState({
+            name: reduxState.name,
+            address: reduxState.address,
+            city: reduxState.city,
+            state: reduxState.state,
+            zip: reduxState.zip
+        })
+    }
 
     //handle changes for each item in state
     handleChangeName(e){
@@ -59,27 +59,27 @@ export default class WizardStep1 extends Component{
     }
 
     //send state values to redux store
-    saveToRedux(){
+    saveToRedux = () => {
         store.dispatch({
             type: UPDATE_NAME,
             payload: this.state.name
         })
-        // store.dispatch({
-        //     type: UPDATE_ADDRESS,
-        //     payload: this.state.address
-        // })
-        // store.dispatch({
-        //     type: UPDATE_CITY,
-        //     payload: this.state.city
-        // })
-        // store.dispatch({
-        //     type: UPDATE_STATE,
-        //     payload: this.state.state
-        // })
-        // store.dispatch({
-        //     type: UPDATE_ZIP,
-        //     payload: this.state.zip
-        // })
+        store.dispatch({
+            type: UPDATE_ADDRESS,
+            payload: this.state.address
+        })
+        store.dispatch({
+            type: UPDATE_CITY,
+            payload: this.state.city
+        })
+        store.dispatch({
+            type: UPDATE_STATE,
+            payload: this.state.state
+        })
+        store.dispatch({
+            type: UPDATE_ZIP,
+            payload: this.state.zip
+        })
     }
 
 
@@ -119,7 +119,7 @@ export default class WizardStep1 extends Component{
                     </section>
                     <section className='step-1-buttons'>
                         <Link to="/"><button className="next-button-1">Prev</button></Link>
-                        <Link to="/wizard/step2"><button className="next-button-1">Next Step</button></Link>
+                        <Link to="/wizard/step2"><button className="next-button-1" onClick={this.saveToRedux}>Next Step</button></Link>
                     </section>
                 </div>
             </>

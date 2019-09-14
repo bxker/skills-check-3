@@ -50,6 +50,7 @@ export default class Dashboard extends Component{
                             mortgage={house.mortgage}
                             rent={house.rent}
                             id={house.id}
+                            key={house.id}
                         />
 
                     ))): <p>No houses to display</p>}
