@@ -49,6 +49,7 @@ export default class Dashboard extends Component{
                             img={house.img}
                             mortgage={house.mortgage}
                             rent={house.rent}
+                            id={house.id}
                         />
 
                     ))): <p>No houses to display</p>}

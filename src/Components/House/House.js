@@ -19,7 +19,7 @@ export default class House extends Component{
                     <section>
                         <h2>Monthly Mortgage: ${this.props.mortgage}</h2>
                         <h2>Desired Rent: ${this.props.rent}</h2>
-                        <Link to={`/displayhouse/${this.props.name}`}><button>View House</button></Link>
+                        <Link to={`/displayhouse/${this.props.id}`}><button>View House</button></Link>
                     </section>
                 </div>
         )

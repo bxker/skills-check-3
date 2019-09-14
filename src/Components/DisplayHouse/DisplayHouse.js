@@ -22,7 +22,7 @@ export default class House extends Component{
         return(
                 <div className="display-house-container">
                     <h1>Displayed house</h1>
-                    <h1>{this.props.match.params.name}</h1>
+                    <h1>{this.props.match.params.id}</h1>
                 </div>
         )
     }
