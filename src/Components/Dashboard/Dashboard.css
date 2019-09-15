@@ -1,5 +1,5 @@
 .dash-container {
-    width: 100vw;
+    max-width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
