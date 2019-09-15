@@ -5,7 +5,7 @@ require('dotenv').config();
 const {SERVER_PORT, CONNECTION_STRING} = process.env;
 
 //functions
-const {getHouses} = require('./controller');
+const {getHouses, addToHouses} = require('./controller');
 
 
 massive(CONNECTION_STRING)
@@ -18,6 +18,7 @@ massive(CONNECTION_STRING)
 app.use(express.json());
 
 app.get('/api/houses', getHouses);
+app.post('/api/houses', addToHouses);
 
 
 

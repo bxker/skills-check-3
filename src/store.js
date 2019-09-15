@@ -17,9 +17,9 @@ export const UPDATE_ADDRESS = 'UPDATE_ADDRESS'
 export const UPDATE_CITY = 'UPDATE_CITY'
 export const UPDATE_STATE = 'UPDATE_STATE'
 export const UPDATE_ZIP = 'UPDATE_ZIP'
-// export const UPDATE_IMG = 'UPDATE_IMG'
-// export const UPDATE_MORTGAGE = 'UPDATE_MORTGAGE'
-// export const UPDATE_RENT = 'UPDATE_RENT'
+export const UPDATE_IMG = 'UPDATE_IMG'
+export const UPDATE_MORTGAGE = 'UPDATE_MORTGAGE'
+export const UPDATE_RENT = 'UPDATE_RENT'
 
 
 function reducer(state = initialState, action){
@@ -50,6 +50,21 @@ function reducer(state = initialState, action){
             return{
                 ...state,
                 zip: payload
+            }
+        case UPDATE_IMG:
+            return{
+                ...state,
+                img: payload
+            }
+        case UPDATE_MORTGAGE:
+            return{
+                ...state,
+                mortgage: payload
+            }
+        case UPDATE_RENT:
+            return{
+                ...state,
+                rent: payload
             }
         default:
             return state;
